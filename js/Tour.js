@@ -47,31 +47,12 @@ AFRAME.registerComponent("tour", {
       }
     };
 
-    for (var key in details) {
-      const item = details[key];
-      // Thubnail Element
-      const thumbNail = this.createThumbNail(item);
-      // Title
-      const title = this.createTitleEl(item);
-      thumbNail.appendChild(title);
-      this.placesContainer.appendChild(thumbNail);
-    }
+   
   },
 
   createThumbNail: function(item) {
-    const entityEl = document.createElement("a-entity");
-    const id = `place-${item.id}`;
-    entityEl.setAttribute("visible", true);
-    entityEl.setAttribute("id", id);
-    entityEl.setAttribute("geometry", {
-      primitive: "circle",
-      radius: 3
-    });
-    entityEl.setAttribute("position", item.position);
-    entityEl.setAttribute("rotation", item.rotation);
-    entityEl.setAttribute("material", { src: item.src, opacity: 0.6 });
-    entityEl.setAttribute("cursor-listener", {});
-    return entityEl;
+
+    
   },
   createTitleEl: function(item) {
     const entityEl = document.createElement("a-entity");
